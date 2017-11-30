@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             x:Class="Sensei.MediaFormsPage">
+    <ContentPage.Content>
+        <forms:VideoView HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" 
+                         AspectMode="AspectFill"
+                         Source="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+    </ContentPage.Content>
+</ContentPage>
