@@ -5,7 +5,7 @@
              x:Class="Sensei.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Button Clicked="Button_Clicked" />
+            <Button Clicked="Button_Clicked" Text="Play Video" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

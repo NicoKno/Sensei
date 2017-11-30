@@ -26,6 +26,10 @@ namespace Sensei.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::Sensei.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::Sensei.Droid.Resource.String.Hello;
+			global::Plugin.AudioRecorder.Resource.String.ApplicationName = global::Sensei.Droid.Resource.String.ApplicationName;
+			global::Plugin.AudioRecorder.Resource.String.Hello = global::Sensei.Droid.Resource.String.Hello;
 			global::Plugin.MediaManager.Forms.Android.Resource.Animation.abc_fade_in = global::Sensei.Droid.Resource.Animation.abc_fade_in;
 			global::Plugin.MediaManager.Forms.Android.Resource.Animation.abc_fade_out = global::Sensei.Droid.Resource.Animation.abc_fade_out;
 			global::Plugin.MediaManager.Forms.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::Sensei.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
