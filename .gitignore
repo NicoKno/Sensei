@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Sensei/v15
+/packages
+/Sensei/Sensei/bin/Debug
+/Sensei/Sensei/obj/Debug
+/Sensei/Sensei.Android/bin/Debug
+/Sensei/Sensei.Android/obj
+/Sensei/Sensei.iOS/obj
