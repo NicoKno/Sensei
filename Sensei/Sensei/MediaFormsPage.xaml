@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="3*" />
+                <RowDefinition Height="2*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
             
@@ -15,11 +15,11 @@
                          HorizontalOptions="StartAndExpand" 
                          VerticalOptions="StartAndExpand" 
                          AspectMode="AspectFill"
-                         Source="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+                         Source="/sdcard/audioFile.3gp" />
 
             <StackLayout Grid.Row="1">
-                <Button Text="Play" Clicked="Button_Clicked" />
-                <Button Text="Record" Clicked="Button_Clicked_1" />
+                <Button Text="Play" Clicked="PlayButtonClicked" />
+                <Button x:Name="ButtonRecord" Text="Record" Clicked="StartRecordingClicked" />
                 <Label Text="Spoken: " x:Name="LabelSpoken" />
             </StackLayout>
             
