@@ -11,15 +11,14 @@
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
             
-            <forms:VideoView Grid.Row="0" Grid.RowSpan="1"
+            <forms:VideoView Grid.Row="0"
                          HorizontalOptions="StartAndExpand" 
                          VerticalOptions="StartAndExpand" 
                          AspectMode="AspectFill"
                          Source="/sdcard/audioFile.3gp" />
 
             <StackLayout Grid.Row="1">
-                <Button Text="Play" Clicked="PlayButtonClicked" />
-                <Button x:Name="ButtonRecord" Text="Record" Clicked="StartRecordingClicked" />
+                <Button x:Name="ButtonPlay" Text="Start Training" Clicked="PlayButtonClicked" />
                 <Label Text="Spoken: " x:Name="LabelSpoken" />
             </StackLayout>
             

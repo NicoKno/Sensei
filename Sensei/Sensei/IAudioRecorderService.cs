@@ -7,5 +7,6 @@
         void Play();
         string OutputFilePath { get; }
         bool OutputFileExists { get; }
+        int MaxAmplitude { get; }
     }
 }

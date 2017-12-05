@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
 using Plugin.MediaManager;
 using Plugin.MediaManager.Abstractions;
 using Xamarin.Forms;
@@ -9,9 +7,10 @@ namespace Sensei
 {
     public partial class MediaFormsPage : ContentPage
     {
-
         private IPlaybackController _playbackController => CrossMediaManager.Current.PlaybackController;
         private readonly IAudioRecorderService _recorder = DependencyService.Get<IAudioRecorderService>();
+
+        private bool _isRecording;
 
         public MediaFormsPage()
         {
@@ -20,18 +19,21 @@ namespace Sensei
 
         private void PlayButtonClicked(object sender, EventArgs e)
         {
-            _playbackController.Play();
-        }
-
-        private bool _isRecording = false;
-
-        private void StartRecordingClicked(object sender, EventArgs e)
-        {
             if (!_isRecording)
             {
+                _playbackController.Play();
+
                 _isRecording = true;
                 _recorder.Start();
-                ButtonRecord.Text = "Stop Recording";
+
+                ButtonPlay.Text = "Stop Training";
+
+                Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+                {
+                    LabelSpoken.Text = $"Amplitude: {_recorder.MaxAmplitude}";
+                    return true;
+                });
+
             }
             else
             {
@@ -41,5 +43,7 @@ namespace Sensei
                 LabelSpoken.Text = $"FileExists: {_recorder.OutputFileExists}";
             }
         }
+
+        
     }
 }

@@ -38,5 +38,7 @@ namespace Sensei.Droid
 
         public string OutputFilePath => "/sdcard/audioFile.3gp";
         public bool OutputFileExists => System.IO.File.Exists(OutputFilePath);
+
+        public int MaxAmplitude => _recorder.MaxAmplitude;
     }
 }
