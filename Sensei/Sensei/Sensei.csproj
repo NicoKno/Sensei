@@ -40,6 +40,7 @@
     </Compile>
     <Compile Include="AudioBackgroundListener.cs" />
     <Compile Include="IAudioRecorderService.cs" />
+    <Compile Include="IVideoSourceProvider.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -47,6 +48,7 @@
       <DependentUpon>MediaFormsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoStep.cs" />
     <Compile Include="VideoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

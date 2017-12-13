@@ -15,11 +15,13 @@
                          HorizontalOptions="StartAndExpand" 
                          VerticalOptions="StartAndExpand" 
                          AspectMode="AspectFill"
-                         Source="/sdcard/audioFile.3gp" />
+                         Source="/sdcard/audioFile.3gp"
+                         x:Name="VideoView"/>
 
             <StackLayout Grid.Row="1">
                 <Button x:Name="ButtonPlay" Text="Start Training" Clicked="PlayButtonClicked" />
                 <Label Text="Spoken: " x:Name="LabelSpoken" />
+                <Label Text="Time: " x:Name="LabelTime" />
             </StackLayout>
             
         </Grid>
