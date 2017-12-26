@@ -26,10 +26,10 @@ namespace Sensei
         {
             InitializeComponent();
 
-            var videoPath = _videoSource.GetVideoSource("Heian_Shodan.mp4");
+            var videoPath = _videoSource.GetVideoSource("Heian_Shodan_new.mp4");
 
             VideoView.Source = videoPath;
-
+            
             _mediaManager.PlayingChanged += MediaManagerOnPlayingChanged;
 
             _queue.Enqueue(new VideoStep { StopLow = 15850, StopHigh = 16500 });
@@ -41,7 +41,7 @@ namespace Sensei
 
         private async void MediaManagerOnPlayingChanged(object sender, PlayingChangedEventArgs playingChangedEventArgs)
         {
-            LabelTime.Text = $"Time: {playingChangedEventArgs.Position.TotalSeconds / 1000}";
+            LabelTime.Text = $"Time: {playingChangedEventArgs.Position.TotalSeconds} Time: {playingChangedEventArgs.Position}";
 
             if (!_queue.Any())
             {
@@ -84,7 +84,6 @@ namespace Sensei
                 await _playbackController.Stop();
 
                 _isRecording = false;
-                _recorder.Stop();
 
                 ButtonPlay.Text = "Start Training";
 
